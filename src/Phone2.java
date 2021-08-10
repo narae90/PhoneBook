@@ -20,48 +20,48 @@ public class Phone2 {
 
 
 			
-			// ¸ŞÀÎ Ãâ·Â È­¸é
+			// ë©”ì¸ ì¶œë ¥ í™”ë©´
 		System.out.println("**********************************************");	
-		System.out.println("*              ÀüÈ­¹øÈ£ °ü¸® ÇÁ·Î±×·¥              *");
+		System.out.println("*              ì „í™”ë²ˆí˜¸ ê´€ë¦¬ í”„ë¡œê·¸ë¨              *");
 		System.out.println("**********************************************");
 			
 		while(run) {
-			System.out.println("1.¸®½ºÆ® | 2.µî·Ï | 3.»èÁ¦ | 4.°Ë»ö | 5.Á¾·á");
+			System.out.println("1.ë¦¬ìŠ¤íŠ¸ | 2.ë“±ë¡ | 3.ì‚­ì œ | 4.ê²€ìƒ‰ | 5.ì¢…ë£Œ");
 			System.out.println("----------------------------------------------");
-			System.out.print("¸Ş´º¹øÈ£ : ");
+			System.out.print("ë©”ë‰´ë²ˆí˜¸ : ");
 			
 			int num = sc.nextInt();
 			
 			
 			switch(num) {
 			case 1 :
-				list(); // ¸®½ºÆ®
+				list(); // ë¦¬ìŠ¤íŠ¸
 				break;
 			case 2:
-				insert(); // µî·Ï
+				insert(); // ë“±ë¡
 				break;
 			case 3:
-				delete(); // »èÁ¦
+				delete(); // ì‚­ì œ
 				break;
 			case 4:
-				search(); // °Ë»ö
+				search(); // ê²€ìƒ‰
 				break;
 			case 5 :
 				System.out.println("**********************************************");
-				System.out.println("*                  °¨»çÇÕ´Ï´Ù.                  *");
+				System.out.println("*                  ê°ì‚¬í•©ë‹ˆë‹¤.                  *");
 				System.out.println("**********************************************");
 				run = false;
 				break;
 	        default:
-	            System.out.println("\n[´Ù½ÃÀÔ·ÂÇØÁÖ¼¼¿ä]\n");
+	            System.out.println("\n[ë‹¤ì‹œì…ë ¥í•´ì£¼ì„¸ìš”]\n");
 	            break;
-			} // switch ¹® ´İ±â
-		} // while ¹® ´İ±â
-	} //¸ŞÀÎ ´İ±â
+			} // switch ë¬¸ ë‹«ê¸°
+		} // while ë¬¸ ë‹«ê¸°
+	} //ë©”ì¸ ë‹«ê¸°
 
 
 		private static void list() {
-			System.out.println("<1.¸®½ºÆ®>\n");		
+			System.out.println("<1.ë¦¬ìŠ¤íŠ¸>\n");		
 			try {
 				File f = new File("src/list.txt");
 				BufferedReader br = new BufferedReader(new FileReader(f));
@@ -85,12 +85,12 @@ public class Phone2 {
 		private static void insert() {
 			Scanner sc = new Scanner(System.in);
 			String[] add = new String[3];				
-			System.out.println("<2.µî·Ï>");				
-			System.out.print(">ÀÌ¸§ : ");			
+			System.out.println("<2.ë“±ë¡>");				
+			System.out.print(">ì´ë¦„ : ");			
 			add[0] = sc.next();				
-			System.out.print(">ÇÚµåÆù : ");
+			System.out.print(">í•¸ë“œí° : ");
 			add[1] = sc.next();
-			System.out.print(">ÁıÀüÈ­ : ");
+			System.out.print(">ì§‘ì „í™” : ");
 			add[2] = sc.next();
 			
 			try {
@@ -108,7 +108,7 @@ public class Phone2 {
              } catch (Exception e) {
             	 e.printStackTrace();
 			}
-				System.out.println("\n[µî·ÏµÇ¾ú½À´Ï´Ù.]\n");
+				System.out.println("\n[ë“±ë¡ë˜ì—ˆìŠµë‹ˆë‹¤.]\n");
 			
 		}
 		
@@ -116,8 +116,8 @@ public class Phone2 {
 		
 		private static void delete() {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("<3.»èÁ¦>");
-			System.out.println(">¹øÈ£ : ");
+			System.out.println("<3.ì‚­ì œ>");
+			System.out.println(">ë²ˆí˜¸ : ");
 			String dummy = "";
 			int del = 0;
 			String line;
@@ -145,15 +145,15 @@ public class Phone2 {
             } catch (Exception e) {
            	 e.printStackTrace();
            	 }			 
-			System.out.println("»èÁ¦µÇ¾ú½À´Ï´Ù.\n");
+			System.out.println("ì‚­ì œë˜ì—ˆìŠµë‹ˆë‹¤.\n");
 		}
 		
 		private static void search() {
 			String find;
 			String line;
 			String line4 = "";
-			System.out.println("<4.°Ë»ö>");
-			System.out.println(">ÀÌ¸§ : ");
+			System.out.println("<4.ê²€ìƒ‰>");
+			System.out.println(">ì´ë¦„ : ");
 			
 			Scanner sc = new Scanner(System.in);
 			find = sc.next();
@@ -175,8 +175,4 @@ public class Phone2 {
 	           	 e.printStackTrace();
 	            }
 		}
-} // Å¬·¡½º ´İ±â ³¡
-
-
-			
-
+} // í´ë˜ìŠ¤ ë‹«ê¸° ë
