@@ -17,17 +17,21 @@ public class PhoneBookVO {
 	}
 	
 	public PhoneBookVO(Long id, String name, String hp, String tel) {
-		this(name); // hp랑 tel 써줘야하는데 오류나서 일단 주석
 		Id = id;
+		Name = name;
+		Hp = hp;
+		Tel = tel;
 
 	}
 	
-	public PhoneBookVO(String name, String hp, String tel) {
-		this(name); // hp랑 tel 써줘야하는데 오류나서 일단 주석
-	}
+//	public PhoneBookVO(String name, String hp, String tel) {
+//		Name = name;
+//		Hp = hp;
+//		Tel = tel;
+//
+//	}
 	
-	
-	
+
 	
 
 	public Long getPhoneBookId() {

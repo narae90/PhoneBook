@@ -44,7 +44,7 @@ public class PhoneBookDAOImpl implements PhoneBookDAO {
 			// 루프 : 객체화
 			while(rs.next()) {
 				Long id = rs.getLong(1);
-				String name = rs.getString(1);
+				String name = rs.getString(2);
 				String hp = rs.getString(3);
 				String tel = rs.getString(4);
 				
@@ -86,11 +86,11 @@ public class PhoneBookDAOImpl implements PhoneBookDAO {
 			//	ResultSet -> List 변환
 			while(rs.next()) {
 				Long id = rs.getLong(1);
-				String name = rs.getString(1);
+				String name = rs.getString(2);
 				String hp = rs.getString(3);
 				String tel = rs.getString(4);
 				
-				PhoneBookVO vo = new PhoneBookVO(id, name, hp, tel);
+				PhoneBookVO vo = new PhoneBookVO(id,name, hp, tel);
 				list.add(vo);
 			}
 		} catch (SQLException e) {

@@ -24,7 +24,7 @@ public class PhoneBookApp2 {
 		System.out.print("검색어:");
 		String keyword = scanner.next();
 		
-		PhoneBookDAOImpl dao = new PhoneBookDAOImpl();
+		PhoneBookDAO dao = new PhoneBookDAOImpl();
 		
 		List<PhoneBookVO> list = dao.search(keyword);
 		Iterator<PhoneBookVO> it = list.iterator();
@@ -54,7 +54,7 @@ public class PhoneBookApp2 {
 		
 		boolean success = dao.delete(Id);
 		
-		System.out.println("Author DELETE:" + (success ? "성공": "실패"));
+		System.out.println("PhoneBook DELETE:" + (success ? "성공": "실패"));
 		scanner.close();
 	}
 	
@@ -63,6 +63,9 @@ public class PhoneBookApp2 {
 	
 	private static void insert() {
 		Scanner scanner = new Scanner(System.in);
+        System.out.print("번호: "); 
+        Long id = scanner.nextLong();
+		
 		System.out.print("이름:");
 		String name = scanner.nextLine();
 		System.out.print("핸드폰:");
@@ -70,13 +73,13 @@ public class PhoneBookApp2 {
 		System.out.print("집전화:");
 		String tel = scanner.nextLine();
 		
-		PhoneBookVO vo = new PhoneBookVO(name, hp, tel);
+		PhoneBookVO vo = new PhoneBookVO(id, name, hp, tel);
 		
 		PhoneBookDAO dao = new PhoneBookDAOImpl();
 		
 		boolean success = dao.insert(vo);
 		
-		System.out.println("Author INSERT:" + 
+		System.out.println("PhoneBook INSERT:" + 
 				(success ? "성공": "실패"));
 		scanner.close();
 	}
