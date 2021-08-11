@@ -38,7 +38,7 @@ public class PhoneBookDAOImpl implements PhoneBookDAO {
 			conn = getConnection();
 			stmt = conn.createStatement();
 
-			String sql = "SELECT id, name, hp, tel " + " FROM PHONE_BOOK";
+			String sql = "SELECT id, name, hp, tel " + " FROM PhoneBook";
 			rs = stmt.executeQuery(sql);
 			
 			// 루프 : 객체화
