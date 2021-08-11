@@ -48,11 +48,11 @@ public class PhoneBookApp {
 	private static void delete() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("넘버:");
-		long authorId = scanner.nextLong();
+		long Id = scanner.nextLong();
 		
 		PhoneBookDAO dao = new PhoneBookDAOImpl();
 		
-		boolean success = dao.delete(authorId);
+		boolean success = dao.delete(Id);
 		
 		System.out.println("Author DELETE:" + (success ? "성공": "실패"));
 		scanner.close();
@@ -63,6 +63,7 @@ public class PhoneBookApp {
 	
 	
 	private static void insert() {
+		
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("이름:");
 		String name = scanner.nextLine();
@@ -101,6 +102,7 @@ public class PhoneBookApp {
 				PhoneBookVO vo = it.next();
 				
 				System.out.print("메뉴번호 : ");
+
 				
 			}
 
