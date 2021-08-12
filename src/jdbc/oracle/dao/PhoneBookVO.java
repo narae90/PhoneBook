@@ -66,7 +66,7 @@ public class PhoneBookVO {
 
 	@Override
 	public String toString() {
-		return "PhoneBookVO [Id=" + Id + ", Name=" + Name + ", Hp=" + Hp + ", Tel=" + Tel + "]";
+		return "PhoneBookVO [Name=" + Name + ", Hp=" + Hp + ", Tel=" + Tel + "]";
 	}
 
 

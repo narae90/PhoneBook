@@ -60,7 +60,7 @@ public class PhoneBookApp {
 		
 		while (it.hasNext()) {
 			PhoneBookVO vo = it.next();
-			System.out.printf("%d%s\t%s\t%s%n",
+			System.out.printf("%d %s\t %s\t %s%n",
 					vo.getId(),
 					vo.getName(),
 					vo.getHp(),
@@ -72,8 +72,8 @@ public class PhoneBookApp {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.println("<2.등록>");
-        System.out.print("번호: "); 
-        Long id = sc.nextLong();
+//        System.out.print("번호: "); 
+//        Long id = sc.nextLong();
 		
         System.out.print("이름: "); 
         String name = sc.next();
@@ -85,14 +85,14 @@ public class PhoneBookApp {
         String tel = sc.next();
         
         
-        PhoneBookVO vo = new PhoneBookVO(id, name, phone, tel);
+        PhoneBookVO vo = new PhoneBookVO(name, phone, tel);
         PhoneBookDAO dao = new PhoneBookDAOImpl();
         boolean success = dao.insert(vo);
         
    	
 		System.out.println("PhoneBook INSERT:" + 
 				(success ? "\n[등록되었습니다.]\n" : "\n[등록 실패]\n"));
-		sc.close();
+		
 	}
 	
 	private static void delete() {
@@ -106,7 +106,7 @@ public class PhoneBookApp {
         
 		System.out.println("PhoneBook DELETE:" + 
 				(success ? "\n[삭제되었습니다.]\n" : "\n[삭제 실패]\n"));
-		sc.close();
+		
 		
 	}
 	
@@ -129,7 +129,7 @@ public class PhoneBookApp {
 					vo.getHp(),
 					vo.getTel());
          }
-         sc.close();
+         
          
 	}
 }
