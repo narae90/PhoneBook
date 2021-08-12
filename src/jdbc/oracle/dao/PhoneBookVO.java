@@ -34,35 +34,35 @@ public class PhoneBookVO {
 
 	
 
-	public Long getPhoneBookId() {
+	public Long getId() {
 		return Id;
 	}
 
-	public void setPhoneBookId(Long id) {
+	public void setId(Long id) {
 		this.Id = id;
 	}
 
-	public String getPhoneBookName() {
+	public String getName() {
 		return Name;
 	}
 
-	public void setPhoneBookName(String name) {
+	public void setName(String name) {
 		this.Name = name;
 	}
 
-	public String getPhoneBookHp() {
+	public String getHp() {
 		return Hp;
 	}
 
-	public void setPhoneBookHp(String hp) {
+	public void setHp(String hp) {
 		this.Hp = hp;
 	}
 
-	public String getPhoneBookTel() {
+	public String getTel() {
 		return Tel;
 	}
 
-	public void setPhoneBookTel(String tel) {
+	public void setTel(String tel) {
 		this.Tel = tel;
 	}
 

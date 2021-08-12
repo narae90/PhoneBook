@@ -60,11 +60,11 @@ public class PhoneBookApp {
 		
 		while (it.hasNext()) {
 			PhoneBookVO vo = it.next();
-			System.out.printf("%d\t%s\t%s\t%s%n",
-					vo.getPhoneBookId(),
-					vo.getPhoneBookName(),
-					vo.getPhoneBookHp(),
-					vo.getPhoneBookTel());
+			System.out.printf("%d %s\t%s\t%s%n",
+					vo.getId(),
+					vo.getName(),
+					vo.getHp(),
+					vo.getTel());
 			}
 		}
 	
@@ -92,6 +92,7 @@ public class PhoneBookApp {
    	
 		System.out.println("PhoneBook INSERT:" + 
 				(success ? "\n[등록되었습니다.]\n" : "\n[등록 실패]\n"));
+		
 		sc.close();
 	}
 	
@@ -123,11 +124,11 @@ public class PhoneBookApp {
          
          while (it.hasNext()) {
         	 PhoneBookVO vo = it.next();
- 			System.out.printf("%n%d\t%s\t%d\t%d%n",
-					vo.getPhoneBookId(),
-					vo.getPhoneBookName(),
-					vo.getPhoneBookHp(),
-					vo.getPhoneBookTel());
+ 			System.out.printf("%n%d\t%s\t%s\t%s%n",
+					vo.getId(),
+					vo.getName(),
+					vo.getHp(),
+					vo.getTel());
          }
          sc.close();
          

@@ -10,7 +10,7 @@ public class PhoneBookApp2 {
 
 	public static void main(String[] args) {
 		PhoneBook();
-//		listprint();
+		listprint();
 //		insert();
 //		delete();
 //		search();
@@ -31,11 +31,11 @@ public class PhoneBookApp2 {
 		
 		while(it.hasNext()) {
 			PhoneBookVO vo = it.next();
-			System.out.printf("%d\t%s\t%d\t%d%n",
-					vo.getPhoneBookId(),
-					vo.getPhoneBookName(),
-					vo.getPhoneBookHp(),
-					vo.getPhoneBookTel());
+			System.out.printf("%d\t%s\t%s\t%s%n",
+					vo.getId(),
+					vo.getName(),
+					vo.getHp(),
+					vo.getTel());
 		}
 		scanner.close();
 		
@@ -63,9 +63,9 @@ public class PhoneBookApp2 {
 	
 	private static void insert() {
 		Scanner scanner = new Scanner(System.in);
-        System.out.print("번호: "); 
-        Long id = scanner.nextLong();
 		
+        System.out.print("번호: "); 
+        Long id = scanner.nextLong();		
 		System.out.print("이름:");
 		String name = scanner.nextLine();
 		System.out.print("핸드폰:");
@@ -79,7 +79,7 @@ public class PhoneBookApp2 {
 		
 		boolean success = dao.insert(vo);
 		
-		System.out.println("PhoneBook INSERT:" + 
+		System.out.println("PhoneBook insert:" + 
 				(success ? "성공": "실패"));
 		scanner.close();
 	}
@@ -88,8 +88,9 @@ public class PhoneBookApp2 {
 	
 	private static void listprint() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("메뉴번호:");
 		
+		System.out.print("메뉴번호:");
+		Long id = sc.nextLong();
 		
 		PhoneBookDAO dao = new PhoneBookDAOImpl();
 		
@@ -99,11 +100,11 @@ public class PhoneBookApp2 {
 		while(it.hasNext()) {
 			PhoneBookVO vo = it.next();
 			
-			System.out.printf("%n%d\t%s\t%d\t%d%n",
-					vo.getPhoneBookId(),
-					vo.getPhoneBookName(),
-					vo.getPhoneBookHp(),
-					vo.getPhoneBookTel());
+			System.out.printf("%n%d%s\t%s\t%s%n",
+					vo.getId(),
+					vo.getName(),
+					vo.getHp(),
+					vo.getTel());
 		}
 		System.out.println("------------------------------------------");
 	}
