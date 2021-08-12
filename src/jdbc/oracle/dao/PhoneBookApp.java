@@ -60,7 +60,7 @@ public class PhoneBookApp {
 		
 		while (it.hasNext()) {
 			PhoneBookVO vo = it.next();
-			System.out.printf("%d %s\t%s\t%s%n",
+			System.out.printf("%d%s\t%s\t%s%n",
 					vo.getId(),
 					vo.getName(),
 					vo.getHp(),
@@ -92,7 +92,6 @@ public class PhoneBookApp {
    	
 		System.out.println("PhoneBook INSERT:" + 
 				(success ? "\n[등록되었습니다.]\n" : "\n[등록 실패]\n"));
-		
 		sc.close();
 	}
 	

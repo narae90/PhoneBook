@@ -10,8 +10,8 @@ public class PhoneBookApp2 {
 
 	public static void main(String[] args) {
 		PhoneBook();
-		listprint();
-//		insert();
+//		listprint();
+		insert();
 //		delete();
 //		search();
 		

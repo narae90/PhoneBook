@@ -122,12 +122,11 @@ public class PhoneBookDAOImpl implements PhoneBookDAO {
 		try {
 			conn = getConnection();
 			// 실행 계획 // 잘 모르겠음
-			String sql = "INSERT INTO PhoneBook " + " VALUES(seq_PhoneBook_id.NEXTVAL, ?, ?)";
+			String sql = "INSERT INTO PhoneBook " + " VALUES(seq_PhoneBook_id.NEXTVAL, ?, ?,?)";
 			pstmt = conn.prepareStatement(sql); // 준비
-			pstmt.setLong(1, vo.getId());
-			pstmt.setString(2, vo.getName());
-			pstmt.setString(3, vo.getHp());
-			pstmt.setString(4, vo.getTel());
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getHp());
+			pstmt.setString(3, vo.getTel());
 			
 			insertedCount = pstmt.executeUpdate();
 		} catch (SQLException e) {

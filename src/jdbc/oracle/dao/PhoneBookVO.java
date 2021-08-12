@@ -16,23 +16,21 @@ public class PhoneBookVO {
 		Name = name;
 	}
 	
-	public PhoneBookVO(Long id, String name, String hp, String tel) {
-		Id = id;
+	public PhoneBookVO( String name, String hp, String tel) {
+//		Id = id;
 		Name = name;
 		Hp = hp;
 		Tel = tel;
 
 	}
 	
-//	public PhoneBookVO(String name, String hp, String tel) {
-//		Name = name;
-//		Hp = hp;
-//		Tel = tel;
-//
-//	}
-	
 
-	
+	public PhoneBookVO(Long id, String name, String hp, String tel) {
+		Id = id;
+		Name = name;
+		Hp = hp;
+		Tel = tel;
+	}
 
 	public Long getId() {
 		return Id;
